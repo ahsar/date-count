@@ -43,9 +43,13 @@ class dateCount
         $second = number_format($second);
         echo "距当前还有$second 秒\n";
 
-        $count = ($end - $start) / 86400;
-        $count = (int) $count;
-        $param['count'] = $count;
+        // 小时
+        $days = intval(($end - $start) / 3600);
+        echo "距离起始时间还有 $days 小时";
+        // 天
+        $days = $days / 24;
+        $days = (int) $days;
+        $param['count'] = $days;
         $this->formatDate($param);
     }
 
