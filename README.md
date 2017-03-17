@@ -1,2 +1,2 @@
 # date-count
-php language count date application
+php language count days script
